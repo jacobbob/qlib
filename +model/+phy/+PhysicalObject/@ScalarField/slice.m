@@ -30,9 +30,10 @@ for jj=0:n1
 end
 
 if nargin>6
-    X=reshape(x, [n1+1, n2+1]);
-    Y=reshape(y, [n1+1, n2+1]);
-    Field=reshape(z, [n1+1, n2+1]);
+    X=reshape(x, [n2+1, n1+1]);
+    Y=reshape(y, [n2+1, n1+1]);
+    Field=reshape(z, [n2+1, n1+1]);
+    figure;
     switch char(component)
         case 'real'
             fig=surf(X,Y,real(Field));
